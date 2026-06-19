@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-netflix-red: #e50914;
+  --color-netflix-bg: #141414;
+  --color-netflix-card: #2f2f2f;
+  --font-inter: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: var(--color-netflix-bg);
+  background-image: radial-gradient(circle at 50% 0%, #2a080a 0%, var(--color-netflix-bg) 40%);
+  color: #e5e5e5;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar but keep functionality */
+.card-slider {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.card-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom Scrollbar for Sidebar */
+.related-list::-webkit-scrollbar {
+  width: 8px;
+}
+.related-list::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+/* Spinner Animation */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(229, 9, 20, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--color-netflix-red);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Hero Overlay Gradient */
+.hero-overlay-gradient {
+  background: linear-gradient(to top, var(--color-netflix-bg) 10%, transparent 100%);
+}
+
+.hero-vignette {
+  background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.6) 100%);
+}
