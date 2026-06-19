@@ -297,6 +297,16 @@ function openPlayer(channel, useProxyIndex = 0, isHistoryBack = false) {
       });
     }
 
+    dashInstance.updateSettings({
+      streaming: {
+        retryAttempts: {
+          MPD: 0,
+          MediaSegment: 0,
+          InitializationSegment: 0
+        }
+      }
+    });
+
     dashInstance.initialize(videoEl, playUrl, true);
     
     dashInstance.on(dashjs.MediaPlayer.events.PLAYBACK_STARTED, () => {
