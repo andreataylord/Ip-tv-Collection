@@ -27,7 +27,7 @@ https://raw.githubusercontent.com/Zaman-Topu/Ip-tv-Collection/main/FINAL_IPTV_CO
 
 **EPG (TV Guide) URL:**
 ```http
-https://raw.githubusercontent.com/time2shine/IPTV/refs/heads/master/epg.xml
+https://raw.githubusercontent.com/Zaman-Topu/Ip-tv-Collection/main/FINAL_EPG_COMPLETE.xml.gz
 ```
 
 ---

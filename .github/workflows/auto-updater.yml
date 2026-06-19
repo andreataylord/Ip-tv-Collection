@@ -31,6 +31,9 @@ jobs:
       - name: Run Auto-Updater Script (Fetch & Merge)
         run: python scripts/auto_updater.py
 
+      - name: Run EPG Aggregator (Merge & Compress)
+        run: python scripts/epg_generator.py
+
       - name: Run Status Checker (Update README)
         run: python scripts/update_stats.py
 
@@ -38,7 +41,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add FINAL_IPTV_COMPLETE.m3u README.md
+          git add FINAL_IPTV_COMPLETE.m3u FINAL_EPG_COMPLETE.xml.gz README.md
           
           if git diff --staged --quiet; then
             echo "No new channels or updates found."
