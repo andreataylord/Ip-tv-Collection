@@ -1,10 +1,12 @@
 import './style.css';
 import Hls from 'hls.js';
+import dashjs from 'dashjs';
 
 const M3U_URL_LIVE = "https://raw.githubusercontent.com/Zaman-Topu/Ip-tv-Collection/main/FINAL_IPTV_COMPLETE.m3u";
 const M3U_URL_MOVIES = "https://raw.githubusercontent.com/Zaman-Topu/Ip-tv-Collection/main/FINAL_MOVIES_COMPLETE.m3u";
 
 let hlsInstance = null;
+let dashInstance = null;
 const videoEl = document.getElementById('video-player');
 const playerView = document.getElementById('player-view');
 const homeView = document.getElementById('home-view');
@@ -257,7 +259,9 @@ function openPlayer(channel, useProxyIndex = 0, isHistoryBack = false) {
   const proxies = [
     '', // Direct
     'https://api.allorigins.win/raw?url=',
-    'https://corsproxy.io/?'
+    'https://corsproxy.io/?',
+    'https://thingproxy.freeboard.io/fetch/',
+    'https://api.codetabs.com/v1/proxy?quest='
   ];
   let currentProxyIndex = useProxyIndex || 0;
   
@@ -265,10 +269,40 @@ function openPlayer(channel, useProxyIndex = 0, isHistoryBack = false) {
     playUrl = proxies[currentProxyIndex] + encodeURIComponent(channel.url);
   }
 
+  if (hlsInstance) {
+    hlsInstance.destroy();
+    hlsInstance = null;
+  }
+  if (dashInstance) {
+    dashInstance.destroy();
+    dashInstance = null;
+  }
+
+  // Handle MPEG-DASH Streams
+  if (playUrl.includes('.mpd') || playUrl.includes('.mp4')) {
+    dashInstance = dashjs.MediaPlayer().create();
+    dashInstance.initialize(videoEl, playUrl, true);
+    
+    dashInstance.on(dashjs.MediaPlayer.events.PLAYBACK_STARTED, () => {
+      bufferingSpinner.classList.add('hidden');
+      errorOverlay.style.display = 'none';
+      qualityMenu.innerHTML = ''; // Basic support for now
+    });
+    
+    dashInstance.on(dashjs.MediaPlayer.events.ERROR, (e) => {
+      console.error('DASH Error', e);
+      if (currentProxyIndex < proxies.length - 1) {
+        openPlayer(channel, currentProxyIndex + 1, true);
+      } else {
+        bufferingSpinner.classList.add('hidden');
+        errorOverlay.style.display = 'flex';
+      }
+    });
+    return;
+  }
+
+  // Handle HLS Streams
   if (Hls.isSupported()) {
-    if (hlsInstance) {
-      hlsInstance.destroy();
-    }
     // Custom loader to proxy all sub-requests (chunks, playlists)
     class ProxyLoader extends Hls.DefaultConfig.loader {
       constructor(config) {
@@ -358,7 +392,14 @@ function closePlayer() {
   homeView.classList.remove('hidden');
   homeView.classList.add('block');
   
-  if (hlsInstance) hlsInstance.destroy();
+  if (hlsInstance) {
+    hlsInstance.destroy();
+    hlsInstance = null;
+  }
+  if (dashInstance) {
+    dashInstance.destroy();
+    dashInstance = null;
+  }
   videoEl.pause();
   videoEl.src = '';
 }
