@@ -7,6 +7,7 @@ const M3U_URL_MOVIES = "https://raw.githubusercontent.com/Zaman-Topu/Ip-tv-Colle
 
 let hlsInstance = null;
 let dashInstance = null;
+let errorTimeout = null;
 const videoEl = document.getElementById('video-player');
 const playerView = document.getElementById('player-view');
 const homeView = document.getElementById('home-view');
