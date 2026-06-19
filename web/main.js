@@ -302,10 +302,7 @@ function openPlayer(channel, useProxyIndex = 0, isHistoryBack = false) {
   
   const proxies = [
     '', // Direct
-    'https://api.allorigins.win/raw?url=',
-    'https://corsproxy.io/?',
-    'https://thingproxy.freeboard.io/fetch/',
-    'https://api.codetabs.com/v1/proxy?quest='
+    'https://corsproxy.io/?'
   ];
   let currentProxyIndex = useProxyIndex || 0;
   
@@ -351,8 +348,15 @@ function openPlayer(channel, useProxyIndex = 0, isHistoryBack = false) {
     dashInstance.on(MediaPlayer.events.ERROR, (e) => {
       console.error('DASH Error', e);
       bufferingSpinner.classList.add('hidden');
-      errorOverlay.style.display = 'block';
-      errorOverlay.innerHTML = `<h3 class="text-netflix-red text-2xl font-bold mb-2">Stream Offline</h3><p class="text-gray-300 text-sm">This DASH stream is offline or geo-blocked. Please try a different channel.</p>`;
+      if (currentProxyIndex < proxies.length - 1) {
+        console.log(`DASH error. Trying proxy ${currentProxyIndex + 1}...`);
+        errorOverlay.style.display = 'block';
+        errorOverlay.innerHTML = `<h3 class="text-netflix-red text-2xl font-bold mb-2">Bypassing Security...</h3><p class="text-gray-300">Trying proxy server to bypass CORS...</p>`;
+        setTimeout(() => openPlayer(channel, currentProxyIndex + 1), 500);
+      } else {
+        errorOverlay.style.display = 'block';
+        errorOverlay.innerHTML = `<h3 class="text-netflix-red text-2xl font-bold mb-2">Stream Offline</h3><p class="text-gray-300 text-sm">This DASH stream is offline or geo-blocked. Please try a different channel.</p>`;
+      }
     });
     
     // Failsafe timeout - if nothing plays in 20s, show error
@@ -367,8 +371,12 @@ function openPlayer(channel, useProxyIndex = 0, isHistoryBack = false) {
         dashInstance = null;
       }
       bufferingSpinner.classList.add('hidden');
-      errorOverlay.style.display = 'block';
-      errorOverlay.innerHTML = `<h3 class="text-netflix-red text-2xl font-bold mb-2">Connection Timeout</h3><p class="text-gray-300 text-sm">Stream did not respond. It may be offline or geo-blocked.</p>`;
+      if (currentProxyIndex < proxies.length - 1) {
+        openPlayer(channel, currentProxyIndex + 1);
+      } else {
+        errorOverlay.style.display = 'block';
+        errorOverlay.innerHTML = `<h3 class="text-netflix-red text-2xl font-bold mb-2">Connection Timeout</h3><p class="text-gray-300 text-sm">Stream did not respond. It may be offline or geo-blocked.</p>`;
+      }
     }, 20000);
     
     // Also clear timeout when video actually starts playing
@@ -378,30 +386,14 @@ function openPlayer(channel, useProxyIndex = 0, isHistoryBack = false) {
 
   // Handle HLS Streams
   if (Hls.isSupported()) {
-    // Custom loader to proxy only playlist manifests, not segment chunks
+    // Custom loader to proxy all sub-requests (chunks, playlists)
     class ProxyLoader extends Hls.DefaultConfig.loader {
       constructor(config) {
         super(config);
       }
       load(context, config, callbacks) {
-        const proxyPrefix = proxies[currentProxyIndex];
-        if (currentProxyIndex > 0 && context.url) {
-          const isPlaylist = context.url.includes('.m3u8') || context.url.includes('.key') || !context.url.includes('.');
-          if (isPlaylist) {
-            if (!context.url.startsWith(proxyPrefix)) {
-              context.url = proxyPrefix + encodeURIComponent(context.url);
-            }
-          } else {
-            // Strip proxy prefix from relative segment URLs so they load directly
-            if (context.url.startsWith(proxyPrefix)) {
-              const encodedUrl = context.url.substring(proxyPrefix.length);
-              try {
-                context.url = decodeURIComponent(encodedUrl);
-              } catch (e) {
-                // Fallback if decode fails
-              }
-            }
-          }
+        if (currentProxyIndex > 0 && context.url && !context.url.startsWith(proxies[currentProxyIndex])) {
+          context.url = proxies[currentProxyIndex] + encodeURIComponent(context.url);
         }
         super.load(context, config, callbacks);
       }
