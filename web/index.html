@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultimate IPTV - Web Player</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-netflix-bg text-gray-200 antialiased font-inter">
+    
+    <!-- Home View -->
+    <div id="home-view" class="block">
+      <!-- Navigation Bar -->
+      <nav id="navbar" class="fixed top-0 w-full px-6 py-4 flex justify-between items-center z-50 transition-all duration-500 bg-gradient-to-b from-black/90 to-transparent">
+      <div class="flex items-center gap-8">
+        <h1 class="text-netflix-red text-3xl font-extrabold tracking-tight">ULTIMATE<span class="text-white font-light">IPTV</span></h1>
+        <ul class="flex gap-6">
+          <li><a href="#" class="nav-link text-white font-medium transition hover:text-white" id="nav-live">Live TV</a></li>
+          <li><a href="#" class="nav-link text-gray-400 font-medium transition hover:text-white" id="nav-movies">Movies</a></li>
+        </ul>
+      </div>
+      <div>
+        <input type="text" id="search-input" class="bg-black/50 border border-gray-700 text-white px-4 py-2 rounded-full focus:outline-none focus:border-netflix-red focus:w-64 transition-all duration-300 w-48" placeholder="Search channels..." />
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="h-[85vh] relative bg-cover bg-center flex items-center px-8 transition-all duration-500" id="hero-section">
+      <div class="absolute inset-0 hero-vignette pointer-events-none"></div>
+      
+      <div class="relative z-10 max-w-2xl">
+        <h1 class="text-6xl font-extrabold mb-4 leading-tight drop-shadow-2xl text-white" id="hero-title">Connecting...</h1>
+        <p class="text-lg text-gray-200 mb-8 drop-shadow-lg" id="hero-desc">Connecting to the massive IPTV database.</p>
+        <div class="flex gap-4">
+          <button class="bg-white text-black px-8 py-3 rounded text-lg font-bold flex items-center gap-2 hover:bg-white/80 transition" id="hero-play">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M8 5v14l11-7z"/></svg> Play
+          </button>
+          <button class="bg-gray-500/70 text-white px-8 py-3 rounded text-lg font-bold flex items-center gap-2 hover:bg-gray-500/50 transition" id="hero-reload">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg> Refresh
+          </button>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 h-64 hero-overlay-gradient pointer-events-none"></div>
+    </header>
+
+      <!-- Main Content: Category Rows -->
+      <main class="px-8 -mt-16 relative z-20 pb-16" id="category-container">
+        <div class="flex justify-center items-center h-64">
+          <div class="spinner"></div>
+        </div>
+      </main>
+    </div> <!-- End Home View -->
+
+    <!-- Video Player View (Separate Page UI) -->
+    <div class="hidden fixed inset-0 z-[3000] bg-black w-full h-screen" id="player-view">
+      
+      <!-- Top Bar (Floating) -->
+      <div class="absolute top-0 w-full p-6 flex items-center justify-between bg-gradient-to-b from-black/90 via-black/50 to-transparent z-50 transition-opacity duration-300" id="player-controls-top">
+        <div class="flex items-center gap-4">
+          <button class="text-white hover:text-netflix-red transition" id="back-to-browse">
+            <svg viewBox="0 0 24 24" class="w-10 h-10 fill-current"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+          </button>
+          <h2 class="text-3xl font-bold text-white drop-shadow-lg" id="player-title">Channel Name</h2>
+        </div>
+        <button class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded flex items-center gap-2 backdrop-blur-md transition" id="toggle-sidebar">
+          <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg> Channels
+        </button>
+      </div>
+      
+      <!-- Video Element -->
+      <div class="relative w-full h-full flex justify-center items-center bg-black group" id="video-container">
+        <video id="video-player" class="w-full h-full outline-none" autoplay></video>
+        
+        <!-- Center Buffering Spinner -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden z-[80]" id="buffering-spinner">
+          <div class="w-16 h-16 border-4 border-white/20 border-t-netflix-red rounded-full animate-spin"></div>
+        </div>
+
+        <!-- Big Center Play Button Overlay -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden z-[80] cursor-pointer bg-black/50 hover:bg-black/70 rounded-full p-4 transition" id="center-play-overlay">
+          <svg viewBox="0 0 24 24" class="w-16 h-16 fill-white"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/80 border border-gray-700 p-8 rounded-xl text-center hidden shadow-2xl z-[100] backdrop-blur-md" id="player-error">
+          <h3 class="text-netflix-red text-2xl font-bold mb-2">Stream Unavailable</h3>
+          <p class="text-gray-300">This stream might be geo-blocked or offline. Trying proxy...</p>
+        </div>
+
+        <!-- Custom YouTube-Style Bottom Controls -->
+        <div class="absolute bottom-0 w-full p-6 px-10 flex flex-col gap-4 bg-gradient-to-t from-black/90 via-black/60 to-transparent z-50 transition-opacity duration-300 pb-10" id="player-controls-bottom">
+          <!-- Progress bar -->
+          <div class="w-full h-1.5 bg-gray-600/70 hover:h-2 transition-all cursor-pointer rounded-full relative group/progress" id="progress-container">
+            <div class="absolute h-full bg-netflix-red w-0 rounded-full pointer-events-none transition-all duration-100 shadow-[0_0_10px_rgba(229,9,20,0.8)]" id="progress-bar">
+               <div class="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-netflix-red rounded-full opacity-0 group-hover/progress:opacity-100 transform translate-x-1/2 shadow-lg transition-opacity"></div>
+            </div>
+          </div>
+          
+          <div class="flex justify-between items-center mt-2">
+            <div class="flex items-center gap-8">
+              <!-- Play/Pause -->
+              <button class="text-white hover:text-netflix-red transition transform hover:scale-110" id="play-pause-btn">
+                <svg viewBox="0 0 24 24" class="w-9 h-9 fill-current" id="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-9 h-9 fill-current hidden" id="pause-icon"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </button>
+              
+              <!-- Volume -->
+              <div class="flex items-center gap-2 group/vol">
+                <button class="text-white hover:text-netflix-red transition transform hover:scale-110" id="mute-btn">
+                  <svg viewBox="0 0 24 24" class="w-8 h-8 fill-current" id="vol-icon"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                  <svg viewBox="0 0 24 24" class="w-8 h-8 fill-current hidden" id="mute-icon"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                </button>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="1" class="w-0 opacity-0 group-hover/vol:w-24 group-hover/vol:opacity-100 transition-all duration-300 accent-netflix-red cursor-pointer h-1.5 bg-gray-600 rounded-full">
+              </div>
+              
+              <!-- Time -->
+              <div class="text-white text-base font-semibold tracking-wide ml-2"><span id="current-time">LIVE</span></div>
+            </div>
+            
+            <div class="flex items-center gap-8 relative">
+              <!-- Quality Setting -->
+              <button class="text-white hover:text-netflix-red transition transform hover:scale-110" id="quality-btn">
+                <svg viewBox="0 0 24 24" class="w-8 h-8 fill-current"><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.06-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.73,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.06,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.43-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.49-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/></svg>
+              </button>
+              
+              <!-- Quality Menu Popup -->
+              <div class="hidden absolute bottom-16 right-12 bg-gray-900/95 border border-gray-700 rounded-lg p-2 min-w-36 flex flex-col gap-1 z-[60] backdrop-blur shadow-2xl" id="quality-menu">
+                <!-- Quality options added here by JS -->
+              </div>
+              
+              <!-- Fullscreen -->
+              <button class="text-white hover:text-netflix-red transition transform hover:scale-110" id="fullscreen-btn">
+                <svg viewBox="0 0 24 24" class="w-9 h-9 fill-current" id="fs-enter"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-9 h-9 fill-current hidden" id="fs-exit"><path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <!-- Floating Sidebar for Related Channels -->
+      <div class="absolute top-0 right-0 h-full w-96 bg-black/90 backdrop-blur-xl border-l border-white/10 flex flex-col transform translate-x-full transition-transform duration-300 z-40" id="related-sidebar">
+        <div class="p-6 pt-24 border-b border-white/10">
+          <h3 class="text-xl font-bold text-white">Up Next / Related</h3>
+        </div>
+        <div class="flex-1 overflow-y-auto p-4 related-list" id="related-list"></div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

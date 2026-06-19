@@ -54,6 +54,7 @@ async def main():
 
     total = len(urls)
     results = {'active': 0, 'blocked': 0, 'isp_bdix': 0, 'down': 0}
+    url_status = {}
 
     print(f"Starting check for {total} channels...")
 
@@ -63,6 +64,7 @@ async def main():
         async with sem:
             status = await check_url(session, url)
             results[status] += 1
+            url_status[url] = status
             completed = sum(results.values())
             if completed % 1000 == 0 or completed == total:
                 print(f"Progress: {completed}/{total} (Active: {results['active']}, Blocked: {results['blocked']}, BDIX: {results['isp_bdix']}, Down: {results['down']})")
@@ -72,6 +74,11 @@ async def main():
     async with aiohttp.ClientSession(connector=connector) as session:
         tasks = [bound_check(u) for u in urls]
         await asyncio.gather(*tasks)
+
+    # Save to JSON for Web Player
+    import json
+    with open('channel_status.json', 'w', encoding='utf-8') as f:
+        json.dump(url_status, f)
 
     active = results['active']
     blocked = results['blocked']
