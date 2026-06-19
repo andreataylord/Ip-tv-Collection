@@ -90,12 +90,19 @@ function parseM3U(content) {
   return channels;
 }
 
-// Group channels by category
 function groupByCategory(channels) {
   const map = {};
   channels.forEach(ch => {
-    if (!map[ch.group]) map[ch.group] = [];
-    map[ch.group].push(ch);
+    let group = ch.group;
+    
+    // Rename and Merge categories to match user preference
+    if (group === 'International News') group = 'News';
+    else if (group === 'Music') group = 'Song';
+    else if (group === 'Cartoon & Kids') group = 'Kids';
+    else if (group === 'Natok & Drama' || group === 'English' || group === 'India') group = 'Entertainment';
+    
+    if (!map[group]) map[group] = [];
+    map[group].push(ch);
   });
   return map;
 }
@@ -104,7 +111,33 @@ function groupByCategory(channels) {
 function renderCategories(categoryMap) {
   container.innerHTML = ''; // Clear loader
   
-  for (const [group, channels] of Object.entries(categoryMap)) {
+  const desiredOrder = [
+    'News',
+    'Song',
+    'Entertainment',
+    'Sports',
+    'Kids',
+    'Bangladesh',
+    'Movies',
+    'Documentary',
+    'Religion',
+    'Countrywise',
+    'Others',
+    'Search Results'
+  ];
+
+  const sortedEntries = Object.entries(categoryMap).sort((a, b) => {
+    let indexA = desiredOrder.indexOf(a[0]);
+    let indexB = desiredOrder.indexOf(b[0]);
+    if (indexA === -1) indexA = 999;
+    if (indexB === -1) indexB = 999;
+    
+    // If both have same index (e.g. 999), sort alphabetically
+    if (indexA === indexB) return a[0].localeCompare(b[0]);
+    return indexA - indexB;
+  });
+
+  for (const [group, channels] of sortedEntries) {
     if (channels.length === 0) continue;
     
     // Sort channels: Live/BDIX first, then unknown/geo, then offline
