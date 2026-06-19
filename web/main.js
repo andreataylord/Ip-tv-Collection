@@ -103,21 +103,37 @@ function renderCategories(categoryMap) {
   container.innerHTML = ''; // Clear loader
   
   for (const [group, channels] of Object.entries(categoryMap)) {
-    // Only show groups with more than 10 channels to keep UI clean, or force BD/Sports
-    if (channels.length < 5 && group !== 'Sports' && group !== 'Bangladesh') continue;
-
+    if (channels.length === 0) continue;
+    
+    // Sort channels: Live/BDIX first, then unknown/geo, then offline
+    const sortedChannels = [...channels].sort((a, b) => {
+      const statusA = channelStatusMap[a.url] || 'unknown';
+      const statusB = channelStatusMap[b.url] || 'unknown';
+      
+      const getScore = (status) => {
+        if (status === 'active' || status === 'isp_bdix') return 3;
+        if (status === 'blocked') return 2;
+        if (status === 'unknown') return 1;
+        if (status === 'down') return 0;
+        return 1;
+      };
+      
+      return getScore(statusB) - getScore(statusA);
+    });
+    
     const row = document.createElement('div');
     row.className = 'mb-10';
     
     const title = document.createElement('h2');
     title.className = 'text-2xl font-bold mb-4 text-white px-2';
     title.innerText = group;
+    row.appendChild(title);
     
     const slider = document.createElement('div');
     slider.className = 'card-slider flex gap-4 overflow-x-auto py-4 px-2';
     
-    // Only render top 50 per row for performance
-    channels.slice(0, 50).forEach(ch => {
+    // Render all channels in the group
+    sortedChannels.forEach(ch => {
       const status = channelStatusMap[ch.url] || 'unknown';
       let badgeHtml = '';
       if (status === 'active') {
