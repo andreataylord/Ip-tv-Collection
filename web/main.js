@@ -217,7 +217,19 @@ function openPlayer(channel, useProxyIndex = 0, isHistoryBack = false) {
     if (hlsInstance) {
       hlsInstance.destroy();
     }
-    
+    // Custom loader to proxy all sub-requests (chunks, playlists)
+    class ProxyLoader extends Hls.DefaultConfig.loader {
+      constructor(config) {
+        super(config);
+      }
+      load(context, config, callbacks) {
+        if (currentProxyIndex > 0 && context.url && !context.url.startsWith(proxies[currentProxyIndex])) {
+          context.url = proxies[currentProxyIndex] + encodeURIComponent(context.url);
+        }
+        super.load(context, config, callbacks);
+      }
+    }
+
     // Faster Startup Config for Live Streams with Fast-Fail for dead links
     hlsInstance = new Hls({
       maxMaxBufferLength: 30,
@@ -228,7 +240,9 @@ function openPlayer(channel, useProxyIndex = 0, isHistoryBack = false) {
       manifestLoadingMaxRetry: 1,
       manifestLoadingTimeOut: 4000,
       levelLoadingMaxRetry: 1,
-      fragLoadingMaxRetry: 1
+      fragLoadingMaxRetry: 1,
+      pLoader: currentProxyIndex > 0 ? ProxyLoader : Hls.DefaultConfig.loader,
+      fLoader: currentProxyIndex > 0 ? ProxyLoader : Hls.DefaultConfig.loader
     });
     hlsInstance.loadSource(playUrl);
     hlsInstance.attachMedia(videoEl);
