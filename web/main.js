@@ -5,6 +5,25 @@ import { MediaPlayer } from 'dashjs';
 const M3U_URL_LIVE = "https://raw.githubusercontent.com/Zaman-Topu/Ip-tv-Collection/main/FINAL_IPTV_COMPLETE.m3u";
 const M3U_URL_MOVIES = "https://raw.githubusercontent.com/Zaman-Topu/Ip-tv-Collection/main/FINAL_MOVIES_COMPLETE.m3u";
 
+// Extra IPTV sources
+const EXTRA_LIVE_SOURCES = [
+  "https://raw.githubusercontent.com/Monjil404/livetv/refs/heads/main/pro",           // TechEasyLife
+  "https://raw.githubusercontent.com/Monjil404/TVspo/refs/heads/main/tvs",           // Sports
+  "https://raw.githubusercontent.com/abusaeeidx/Mrgify-BDIX-IPTV/main/playlist.m3u", // Mrgify BDIX
+  "https://raw.githubusercontent.com/ashik4u/mrgify-clean/main/playlist.m3u",        // Mrgify Clean
+  "https://raw.githubusercontent.com/imShakil/tvlink/refs/heads/main/iptv.m3u8",     // imShakil
+  "https://raw.githubusercontent.com/tvbd/m3uplayer/refs/heads/main/m3u/xniptv.m3u", // Xniptv
+  "https://raw.githubusercontent.com/time2shine/IPTV/master/combined.m3u",           // time2shine
+  "https://raw.githubusercontent.com/ShamimHossainOfficial/IPTV/master/BDIX-IPTV.m3u8", // ShamimHossain
+  "https://raw.githubusercontent.com/Shadmanislam/bdiptv/master/BD%20IPTV.m3u",     // Shadmanislam
+  "https://raw.githubusercontent.com/DrSujonPaul/Sujon/6dc6a1d4eaa20a9239ae27d8e0f00182b60eeb47/iptv", // DrSujonPaul
+  "https://raw.githubusercontent.com/srhady/Hady/refs/heads/main/akash_live.m3u",   // Akash Live
+  "https://raw.githubusercontent.com/bugsfreeweb/LiveTVCollector/main/LiveTV/Bangladesh/LiveTV.m3u", // Bugsfree BD
+  "https://raw.githubusercontent.com/bugsfreeweb/LiveTVCollector/main/LiveTV/India/LiveTV.m3u",     // Bugsfree India
+  "https://lupael.github.io/IPTV/running.m3u",                                       // lupael
+  "https://raw.githubusercontent.com/srhady/axsports/refs/heads/main/playlist.m3u"  // Axsport
+];
+
 let hlsInstance = null;
 let dashInstance = null;
 let errorTimeout = null;
@@ -628,17 +647,32 @@ async function initApp(mode = 'live') {
     console.log("Could not load channel status map", e);
   }
   
-  // Load both playlists if not already loaded
+  // Load all playlists if not already loaded
   if (allTvChannels.length === 0 || allMovieChannels.length === 0) {
-    const [tvData, movieData] = await Promise.all([
+    // Show loading progress
+    container.innerHTML = '<div class="flex flex-col justify-center items-center h-64 gap-4"><div class="spinner"></div><p class="text-gray-400 text-sm">Loading channels from all sources...</p></div>';
+
+    const allSources = [M3U_URL_LIVE, ...EXTRA_LIVE_SOURCES];
+    const [mainTv, movieData, ...extraResults] = await Promise.all([
       loadPlaylist(M3U_URL_LIVE),
-      loadPlaylist(M3U_URL_MOVIES)
+      loadPlaylist(M3U_URL_MOVIES),
+      ...EXTRA_LIVE_SOURCES.map(url => loadPlaylist(url))
     ]);
-    
+
+    // Merge all TV sources, deduplicate by URL
+    const seenUrls = new Set();
+    const mergedTv = [];
+    for (const ch of [...mainTv, ...extraResults.flat()]) {
+      if (ch.url && !seenUrls.has(ch.url)) {
+        seenUrls.add(ch.url);
+        mergedTv.push(ch);
+      }
+    }
+
     // Remove any channel from TV data that exists in Movie data to prevent mixing
     const movieUrls = new Set(movieData.map(m => m.url));
-    const pureTvData = tvData.filter(tv => !movieUrls.has(tv.url));
-    
+    const pureTvData = mergedTv.filter(tv => !movieUrls.has(tv.url));
+
     allTvChannels = pureTvData;
     allMovieChannels = movieData;
   }
