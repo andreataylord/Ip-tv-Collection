@@ -109,9 +109,12 @@ function parseM3U(content) {
       currentChannel.name = commaIdx >= 0 ? line.substring(commaIdx + 1).trim() : 'Unknown Channel';
       if (!currentChannel.name) currentChannel.name = 'Unknown Channel';
     } else if (line.startsWith('http') || line.startsWith('rtmp') || line.startsWith('rtsp')) {
-      currentChannel.url = line.trim();
-      // Only push if we have both name and url
-      if (currentChannel.name && currentChannel.url) {
+      const url = line.trim();
+      currentChannel.url = url;
+      // Skip DRM protected streams since we don't have license keys
+      const isDRM = url.includes('cenc') || url.includes('/enc/');
+      // Only push if we have both name and url and it's not DRM
+      if (currentChannel.name && currentChannel.url && !isDRM) {
         channels.push({ ...currentChannel });
       }
       currentChannel = {};
@@ -244,6 +247,12 @@ heroPlayBtn.addEventListener('click', () => {
 
 // Playback Logic
 function openPlayer(channel, useProxyIndex = 0, isHistoryBack = false) {
+  // Clear any existing timeout from previous channels to prevent ghost error popups
+  if (errorTimeout) {
+    clearTimeout(errorTimeout);
+    errorTimeout = null;
+  }
+
   playerTitle.innerText = channel.name;
   
   // Hide Home, Show Player
