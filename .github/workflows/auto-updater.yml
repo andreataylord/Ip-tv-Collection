@@ -1,0 +1,48 @@
+name: Auto-Updater (Fetch & Deduplicate)
+
+on:
+  schedule:
+    # Runs at 23:00 UTC (05:00 AM BST) every 3 days
+    - cron: '0 23 */3 * *'
+  workflow_dispatch:
+    # Allows manual trigger
+
+jobs:
+  update-playlist:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install aiohttp
+
+      - name: Run Auto-Updater Script (Fetch & Merge)
+        run: python scripts/auto_updater.py
+
+      - name: Run Status Checker (Update README)
+        run: python scripts/update_stats.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add FINAL_IPTV_COMPLETE.m3u README.md
+          
+          if git diff --staged --quiet; then
+            echo "No new channels or updates found."
+          else
+            git commit -m "bot: auto-update playlist from sources and refresh stats"
+            git push
+          fi
