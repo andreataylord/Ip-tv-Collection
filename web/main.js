@@ -44,7 +44,9 @@ const heroPlayBtn = document.getElementById('hero-play');
 let featuredChannel = null;
 
 // State
-let allChannels = [];
+let allTvChannels = [];
+let allMovieChannels = [];
+let currentChannels = [];
 let currentCategoryMap = {};
 let channelStatusMap = {};
 
@@ -498,16 +500,30 @@ async function initApp(mode = 'live') {
     console.log("Could not load channel status map", e);
   }
   
-  let url = mode === 'live' ? M3U_URL_LIVE : M3U_URL_MOVIES;
-  allChannels = await loadPlaylist(url);
+  // Load both playlists if not already loaded
+  if (allTvChannels.length === 0 || allMovieChannels.length === 0) {
+    const [tvData, movieData] = await Promise.all([
+      loadPlaylist(M3U_URL_LIVE),
+      loadPlaylist(M3U_URL_MOVIES)
+    ]);
+    
+    // Remove any channel from TV data that exists in Movie data to prevent mixing
+    const movieUrls = new Set(movieData.map(m => m.url));
+    const pureTvData = tvData.filter(tv => !movieUrls.has(tv.url));
+    
+    allTvChannels = pureTvData;
+    allMovieChannels = movieData;
+  }
   
-  if (allChannels.length > 0) {
+  currentChannels = mode === 'live' ? allTvChannels : allMovieChannels;
+  
+  if (currentChannels.length > 0) {
     // Pick random hero from a popular category
-    const topChannels = allChannels.filter(c => c.group === 'Bangladesh' || c.group === 'Sports' || c.group === 'Movies');
-    const heroPick = topChannels.length > 0 ? topChannels[Math.floor(Math.random() * topChannels.length)] : allChannels[0];
+    const topChannels = currentChannels.filter(c => c.group === 'Bangladesh' || c.group === 'Sports' || c.group === 'Movies' || c.group === 'English');
+    const heroPick = topChannels.length > 0 ? topChannels[Math.floor(Math.random() * topChannels.length)] : currentChannels[0];
     setHero(heroPick);
     
-    currentCategoryMap = groupByCategory(allChannels);
+    currentCategoryMap = groupByCategory(currentChannels);
     renderCategories(currentCategoryMap);
   } else {
     container.innerHTML = '<div class="text-center text-red-500 text-xl py-20">Failed to load channels. Check console.</div>';
@@ -554,7 +570,7 @@ document.getElementById('search-input').addEventListener('input', (e) => {
     return;
   }
   
-  const filtered = allChannels.filter(c => c.name.toLowerCase().includes(term));
+  const filtered = currentChannels.filter(c => c.name.toLowerCase().includes(term));
   renderCategories({'Search Results': filtered});
 });
 
