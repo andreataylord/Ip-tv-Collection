@@ -130,7 +130,7 @@ function renderCategories(categoryMap) {
     row.appendChild(title);
     
     const slider = document.createElement('div');
-    slider.className = 'card-slider flex gap-4 overflow-x-auto py-4 px-2';
+    slider.className = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 py-4 px-2';
     
     // Render all channels in the group
     sortedChannels.forEach(ch => {
@@ -147,7 +147,7 @@ function renderCategories(categoryMap) {
       }
 
       const card = document.createElement('div');
-      card.className = 'relative flex-none w-64 h-36 rounded-md cursor-pointer overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:border hover:border-white/20 hover:z-50 group flex flex-col justify-center items-center';
+      card.className = 'relative w-full aspect-video rounded-md cursor-pointer overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:border hover:border-white/20 hover:z-50 group flex flex-col justify-center items-center';
       card.innerHTML = `
         ${badgeHtml}
         <img src="${ch.logo}" class="w-24 h-24 object-contain transition-transform duration-500 group-hover:scale-75 group-hover:-translate-y-2 drop-shadow-lg" loading="lazy" onerror="this.src='https://via.placeholder.com/150/141414/ffffff?text=No+Logo'">
