@@ -45,12 +45,8 @@ http://premimum.online/movie/jen12345/jen54321/353751.mp4
 http://premimum.online/movie/jen12345/jen54321/717746.mp4
 #EXTINF:-1 group-title="Movies" tvg-logo="https://bugsfreeweb.github.io/LiveTVCollector/BugsfreeLogo/default-logo.png",Jana Nayagan (2026) (Hindi)
 http://premimum.online/movie/jen12345/jen54321/724489.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://bugsfreeweb.github.io/LiveTVCollector/BugsfreeLogo/default-logo.png",Mardaani 3
-http://103.225.94.27/Infobase/hdd-3/hindi/Mardaani%203%20(2026)%201080p%20DVDRip.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Jalshamovieshd.jpg",Jalsha Movies
-http://103.165.93.31:8095/jalshaMovies/index.m3u8
-#EXTINF:-1 group-title="Movies" tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Colors%20Bangla%20Cinema.png",Colors Bangla Cinema
-http://103.165.93.31:8095/colorsBanglaChinema/index.m3u8
+#EXTINF:-1 group-title="Movies" tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/56e54462053b1b278b80b532c89c01f17e360fd5/Sony%20Pix.jpeg",Sony Pix
+https://stream.ottplus.bd/live/pix_hd_abr/live/sony_pix_hd_720/chunks.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Sony%20Max.png",Sony Max
 http://103.99.249.139/sonymax/index.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/56e54462053b1b278b80b532c89c01f17e360fd5/Set%20Max%202.jpeg",Sony Max 2 HD
@@ -85,8 +81,6 @@ http://66.102.126.10:8000/play/a021/index.m3u8
 http://66.102.126.10:8000/play/a020/index.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://bugsfreeweb.github.io/LiveTVCollector/BugsfreeLogo/default-logo.png",Lotus
 https://cdn1.skygo.mn/live/disk1/Lotus/HLSv3-FTA/Lotus-avc1_2089200=342-mp4a_256000_eng=343.m3u8
-#EXTINF:-1 group-title="Movies" tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/56e54462053b1b278b80b532c89c01f17e360fd5/Sony%20Pix.jpeg",Sony Pix
-https://stream.ottplus.bd/live/pix_hd_abr/live/sony_pix_hd_720/chunks.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://m.media-amazon.com/images/M/MV5BNTE0MGVkOTEtYTQzMC00ZGQ5LWEzN2ItZGNkMTgzOTg3MDI2XkEyXkFqcGdeQXVyMTMyMTM0Mzcz._V1_FMjpg_UX1000_.jpg",Tofan
 https://vhoichoi.viewlift.com/Renditions/20240918/1726653787189_88a8sna0ns9a8s7tf/hls/1726653787189_88a8sna0ns9a8s7tf.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://bugsfreeweb.github.io/LiveTVCollector/BugsfreeLogo/default-logo.png",Double Occupancy
@@ -95,6 +89,8 @@ http://vod.cineplexbd.net:8081/movies/Hindi%20Dubbed/Tamil%20Movies/2026/Double%
 https://436f59579436473e8168284cac5d725f.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Plex_RushByAMC/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://img1.wsimg.com/isteam/ip/f5ca61b0-4924-46b3-93d1-5961808d44f6/Home%20no%20vignette%20low_Half2.jpg",EN | AMG TV (Classic)
 https://2-fss-2.streamhoster.com/pl_138/201660-1270634-1/chunklist.m3u8
+#EXTINF:-1 group-title="Movies" tvg-logo="https://i.imgur.com/5pOZQB4.png",EN | Artflix Movie Classics
+https://amogonetworx-artflix-1-nl.samsung.wurl.tv/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://i.pinimg.com/736x/16/96/5a/16965ad632bc23692c8c1a946bd15f2a.jpg",EN | AVA FAMILY
 https://familyhls.avatv.live/hls/stream.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://yt3.googleusercontent.com/8htYIakRJnnyIymW9dKwuwZSYav5YND6wlQlQ-v6NelcyAmpNmOZDFAngGImtaa3O4pAVgMk6w=s72-c-k-c0x00ffffff-no-rj",EN | AVA SERIES
@@ -127,14 +123,22 @@ http://23.237.104.106:8080/USA_HBO_ZONE/index.m3u8
 https://streams2.sofast.tv/ptnr-yupptv/title-LOL-TV-ENG_yupptv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/fc63d5fd-b50e-4d3e-abdf-697d9b6cbf70/manifest.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://yt3.googleusercontent.com/6w9_DUJK4Gbg_gHdsuNnx6MeOuCK3UdjjSUIyb3mExVDJIj_uulO5AIqAXIgf6avNqYP3YnarQ=s72-c-k-c0x00ffffff-no-rj",EN | Made in Hollywood
 https://connection3-ent-nz.samsung.wurl.tv/playlist.m3u8
+#EXTINF:-1 group-title="Movies" tvg-logo="https://i.imgur.com/1ENdbZn.png",EN | Mix Hollywood
+https://ml-pull-hwc.myco.io/MixTV/hls/index.m3u8
+#EXTINF:-1 group-title="Movies" tvg-logo="https://i.imgur.com/NIVhISa.png",EN | Movies Action
+https://shd-amg-fast.edgenextcdn.net/tx011/playlist.m3u8
+#EXTINF:-1 group-title="Movies" tvg-logo="https://assets.playnowmedia.com/THRLMC/logo.png",EN | Movies Thriller
+https://shd-amg-fast.edgenextcdn.net/tx012/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/3/3f/MovieSphere_2022_logo.svg",EN | MovieSphere
-https://mediapackage-ms-source.fullscreen.nz/index.m3u8
+https://amg00353-lionsgatestudio-moviesphere-xumo-zh5u0.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Movies" tvg-logo="https://i.imgur.com/h1ejU90.png",EN | MovieSphere AU
+https://amg00353-lionsgatefilmsi-moviesphereaus-samsungau-7qzhf.amagi.tv/playlist/amg00353-lionsgatefilmsi-moviesphereaus-samsungau/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f0/611-cinemax.png",EN | My Cinema
 https://mytime-tcl.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://mytimemovienetwork.com/wp-content/uploads/2025/07/cropped-MT_SHOWCASE_LOGO_120x90.png",EN | Mytime Movie
 https://mytimeuk-rakuten-samsung.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://i.imgur.com/HYgxPVQ.png",EN | MyTime Movie Network
-https://appletree-mytimeau-samsung.amagi.tv/playlist.m3u8
+https://appletree-mytimeuk-rakuten.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://mytimemovienetwork.com/wp-content/uploads/2025/07/cropped-MT_SHOWCASE_LOGO_120x90.png",EN | MyTime Movie Network BR
 https://appletree-mytime-samsungbrazil.amagi.tv/playlist360p.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBAJ400042T1_20250107T025804SQUARE.png",EN | Sparkle Movies
@@ -34354,25 +34358,25 @@ http://sochinskayatrk.ru/hdtv/hls/strc_hd/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="http://www.nettv.live/uploads/allimg/19/1-1Z5092006450-L.jpg",黑莓电影
 http://121.31.30.90:8085/ysten-business/live/jdianying/1.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1780310920616.png",Sony Max
-https://owrcovcrpy.gpcdn.net/bpk-tv/1730/output/index.mpd?_t=1785279650451|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9vd3Jjb3ZjcnB5LmdwY2RuLm5ldC9icGstdHYvMTczMC9vdXRwdXQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRWRnZVRpbWUiOjE3ODUyOTA0NTB9fX1dfQ&edge-signature=cXhpbBu~qjkjDuDIYis14GaFllHBwdwNmo2Qkx0G29o
+https://owrcovcrpy.gpcdn.net/bpk-tv/1730/output/index.mpd?_t=1785538843088|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9vd3Jjb3ZjcnB5LmdwY2RuLm5ldC9icGstdHYvMTczMC9vdXRwdXQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRWRnZVRpbWUiOjE3ODU1NDk2NDJ9fX1dfQ&edge-signature=2blmkXMjLlIkx5j3P64GSYfrtTNmUpAXs-gBe8qjDew
 #EXTINF:-1 group-title="Movies" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1780311807965.png",Sony Pix
-https://owrcovcrpy.gpcdn.net/bpk-tv/1731/output/index.mpd?_t=1785279651497|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9vd3Jjb3ZjcnB5LmdwY2RuLm5ldC9icGstdHYvMTczMS9vdXRwdXQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRWRnZVRpbWUiOjE3ODUyOTA0NTF9fX1dfQ&edge-signature=pLUeFeNNv94hYfMpaqRNfy0LM3vnuf~j9375PscqbSE
+https://owrcovcrpy.gpcdn.net/bpk-tv/1731/output/index.mpd?_t=1785538844068|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9vd3Jjb3ZjcnB5LmdwY2RuLm5ldC9icGstdHYvMTczMS9vdXRwdXQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRWRnZVRpbWUiOjE3ODU1NDk2NDN9fX1dfQ&edge-signature=ey4Jm4JkgTtB6y4wlB4vtBpYneiK9ujXLUcPViOLPlw
 #EXTINF:-1 group-title="Movies" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770313122372.png",Originals
-https://nomawnoijl.gpcdn.net/akash/originals/playlist.m3u8|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9ub21hd25vaWpsLmdwY2RuLm5ldC9ha2FzaC9vcmlnaW5hbHMvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRWRnZVRpbWUiOjE3ODUyOTA0NTJ9fX1dfQ&edge-signature=7FBtBHnnVVnPyYRSQDC~j4hDJcGF3AiBk5kHV1GNBY4
+https://nomawnoijl.gpcdn.net/akash/originals/playlist.m3u8|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9ub21hd25vaWpsLmdwY2RuLm5ldC9ha2FzaC9vcmlnaW5hbHMvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRWRnZVRpbWUiOjE3ODU1NDk2NDV9fX1dfQ&edge-signature=ZuAnelDSZYZ1mA7kMbPxXTJgiBfcx8aWrOHjHZ31oSc
 #EXTINF:-1 group-title="Movies" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770347851305.png",Cineedge HD
-https://nomawnoijl.gpcdn.net/akash/cineedge/playlist.m3u8|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9ub21hd25vaWpsLmdwY2RuLm5ldC9ha2FzaC9jaW5lZWRnZS8qIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJFZGdlVGltZSI6MTc4NTI5MDQ1Mn19fV19&edge-signature=t9rYR7N4hEdtRGGx~1Byq7Z50txgpULA6O35Q7oNUuc
+https://nomawnoijl.gpcdn.net/akash/cineedge/playlist.m3u8|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9ub21hd25vaWpsLmdwY2RuLm5ldC9ha2FzaC9jaW5lZWRnZS8qIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJFZGdlVGltZSI6MTc4NTU0OTY0NX19fV19&edge-signature=f3dlWxgK0HZSK3s1N~85UUonsWdFu01F-Zw734QWlus
 #EXTINF:-1 group-title="Movies" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770348388925.png",Superrix HD
-https://nomawnoijl.gpcdn.net/akash/superrix/playlist.m3u8|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9ub21hd25vaWpsLmdwY2RuLm5ldC9ha2FzaC9zdXBlcnJpeC8qIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJFZGdlVGltZSI6MTc4NTI5MDQ1Mn19fV19&edge-signature=orbHA~CQx-SfAXuzbvvcqC2t7wK2XGCabMJVjKA40SQ
+https://nomawnoijl.gpcdn.net/akash/superrix/playlist.m3u8|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9ub21hd25vaWpsLmdwY2RuLm5ldC9ha2FzaC9zdXBlcnJpeC8qIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJFZGdlVGltZSI6MTc4NTU0OTY0NX19fV19&edge-signature=X4aLrasp3z3BfIsbEPhr7RTnGyjzjgkGE215q7ReECo
 #EXTINF:-1 group-title="Movies" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770347327658.png",Uniques HD
-https://nomawnoijl.gpcdn.net/akash/uniques/playlist.m3u8|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9ub21hd25vaWpsLmdwY2RuLm5ldC9ha2FzaC91bmlxdWVzLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkVkZ2VUaW1lIjoxNzg1MjkwNDUyfX19XX0&edge-signature=HPDeNohKqwVCkZt~t5zbJ8oPGty6LZ9FT8i8iKU6Q7E
+https://nomawnoijl.gpcdn.net/akash/uniques/playlist.m3u8|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9ub21hd25vaWpsLmdwY2RuLm5ldC9ha2FzaC91bmlxdWVzLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkVkZ2VUaW1lIjoxNzg1NTQ5NjQ1fX19XX0&edge-signature=l50DjZL68IiElte2UcN-n~i-NEQSuXHFNiiI6v9Msw0
 #EXTINF:-1 group-title="Movies" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770312098339.png",Screem
-https://nomawnoijl.gpcdn.net/akash/screem/playlist.m3u8|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9ub21hd25vaWpsLmdwY2RuLm5ldC9ha2FzaC9zY3JlZW0vKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRWRnZVRpbWUiOjE3ODUyOTA0NTJ9fX1dfQ&edge-signature=t1S~KNU4TafwDx7K9JFby7eJNZrNJcgl6DSYWnGWYgw
+https://nomawnoijl.gpcdn.net/akash/screem/playlist.m3u8|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9ub21hd25vaWpsLmdwY2RuLm5ldC9ha2FzaC9zY3JlZW0vKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRWRnZVRpbWUiOjE3ODU1NDk2NDV9fX1dfQ&edge-signature=5N-09OXCfCu61lJdG9cWp-U2zfElR9sqVQGs51oaReg
 #EXTINF:-1 group-title="Movies" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770380126540.png",Crimes
-https://nomawnoijl.gpcdn.net/akash/crimes/playlist.m3u8|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9ub21hd25vaWpsLmdwY2RuLm5ldC9ha2FzaC9jcmltZXMvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRWRnZVRpbWUiOjE3ODUyOTA0NTN9fX1dfQ&edge-signature=9WDtQjlgD1SUK6ydl5FSR2jANM8G4-Gtyg~9cEDyVgo
+https://nomawnoijl.gpcdn.net/akash/crimes/playlist.m3u8|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9ub21hd25vaWpsLmdwY2RuLm5ldC9ha2FzaC9jcmltZXMvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRWRnZVRpbWUiOjE3ODU1NDk2NDV9fX1dfQ&edge-signature=NCILTSMDcqOdOOdC2wDdIIIOE7I8SaKi6fl21g6IyRw
 #EXTINF:-1 group-title="Movies" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770380306806.png",True Stories
-https://nomawnoijl.gpcdn.net/akash/truestories/playlist.m3u8|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9ub21hd25vaWpsLmdwY2RuLm5ldC9ha2FzaC90cnVlc3Rvcmllcy8qIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJFZGdlVGltZSI6MTc4NTI5MDQ1M319fV19&edge-signature=k2K7FX6XWaHseL1tUJC0xmzsrJeAdJEmPjbvPdrUOcg
+https://nomawnoijl.gpcdn.net/akash/truestories/playlist.m3u8|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9ub21hd25vaWpsLmdwY2RuLm5ldC9ha2FzaC90cnVlc3Rvcmllcy8qIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJFZGdlVGltZSI6MTc4NTU0OTY0Nn19fV19&edge-signature=vqtNmzIFIHteQoH~2FhIkCk1tazpgS1QH5nhtQzi30k
 #EXTINF:-1 group-title="Movies" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1770380460488.png",Intelligence
-https://nomawnoijl.gpcdn.net/akash/intelligence/playlist.m3u8|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9ub21hd25vaWpsLmdwY2RuLm5ldC9ha2FzaC9pbnRlbGxpZ2VuY2UvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRWRnZVRpbWUiOjE3ODUyOTA0NTN9fX1dfQ&edge-signature=6pYH-HY~WwVqAwm9k4DU-Xul71LQ0QYlge3MTKkXv6E
+https://nomawnoijl.gpcdn.net/akash/intelligence/playlist.m3u8|Referer=https://akashgo.com/&Origin=https://akashgo.com&edge-key-pair-id=DEFAULT&edge-policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9ub21hd25vaWpsLmdwY2RuLm5ldC9ha2FzaC9pbnRlbGxpZ2VuY2UvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRWRnZVRpbWUiOjE3ODU1NDk2NDZ9fX1dfQ&edge-signature=M1QDffHKzRrfGknPpXcs9Uatg-vk-Ef-BUf7smoorlo
 #EXTINF:-1 group-title="Movies" tvg-logo="https://i.ibb.co/Ns62bY2/2021-04-22-10-24-01.png",Lotus
 http://103.151.60.162:2121/play/a00q/index.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://i.ibb.co/Ns62bY2/2021-04-22-10-24-01.png",Box Cinama
@@ -34381,6 +34385,8 @@ https://d1b5mlajbmvkjv.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d2
 https://d20xuwbyc4yoag.cloudfront.net/v1/master/9d062541f2ff39b5c0f48b743c6411d25f62fc25/DistroTV-MuxIP-CINDIE/387.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/HBO_logo.svg/2560px-HBO_logo.svg.png",HBO
 http://103.213.31.111/HBOHD/index.m3u8
+#EXTINF:-1 group-title="Movies" tvg-logo="https://i.imgur.com/HYgxPVQ.png",EN | MyTime Movie Network
+https://appletree-mytimeau-samsung.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://i.imgur.com/25eWjX2.png",Jalsha Movies HD (1080p)
 http://103.229.254.25:7001/play/a0dt/index.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://bugsfreeweb.github.io/LiveTVCollector/BugsfreeLogo/default-logo.png",Hinde Movies 1
@@ -34393,36 +34399,8 @@ https://cc-tke03xaj1wszc.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da6
 http://idvd.multitvsolution.com/idvo/bflixmovies_540p.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/B4U%20Movies.png",B4U Movies
 https://cdnb4u.wiseplayout.com/B4U_Movies/HD1080/HD1080.m3u8
-#EXTINF:-1 group-title="Movies" tvg-logo="https://image.tmdb.org/t/p/w500/3o5YPjDGDTcTDL5ftDA9NwN9dLd.jpg",Disclosure Day (2026) 🆕
-http://ftp.ctgfun.com/English/Disclosure%20Day%20%282026%29%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Disclosure%20Day%20%282026%29%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://image.tmdb.org/t/p/w500/13MmRwmG5NmaMfU8qNrtgGXisiD.jpg",The Death Of Robin Hood (2026) 🆕
-http://ftp.ctgfun.com/English/The%20Death%20Of%20Robin%20Hood%20%282026%29%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D/The%20Death%20Of%20Robin%20Hood%20%282026%29%201080p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://image.tmdb.org/t/p/w500/moejGxR2haap29d9NQ7qe8x4eGj.jpg",SuperGirl (2026) 🆕
-http://ftp.ctgfun.com/English/SuperGirl%20%282026%29%20Hindi%20English%20720p%20HDTS%20x264%20ESub%20%5BDDN%5D/SuperGirl%20%282026%29%20Hindi%20English%20720p%20HDTS%20x264%20ESub%20%5BDDN%5D.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://image.tmdb.org/t/p/w500/29Jdsak3SrwGds5k1t43kH6Khed.jpg",The Legend Of Aang The Last Airbender (2026)
-http://cinehub24.com/ftp/Movies/animation/new/The%20Legend%20Of%20Aang%20The%20Last%20Airbender%20%282026%29/The.Legend.Of.Aang.The.Last.Airbender.2026.1080p.WEBRip.x264.AAC-%5BYTS.BZ%5D.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://image.tmdb.org/t/p/w500/vroJQMcR4hynkuFbqMhjA4NjOTK.jpg",Christy (2025)
-http://cinehub24.com/ftp/Movies/hollywood/2025/Christy%20%282025%29/Christy.2025.720p.WEBRip.x264.AAC-%5BYTS.LT%5D.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://image.tmdb.org/t/p/w500/5NSQOsIFShUNFNE4fzsM6KdUbxr.jpg",72 Hours (2024)
-http://cinehub24.com/ftp/Movies/hollywood/2024/72%20Hours%20%282024%29/72.Hours.2024.720p.WEBRip.x264.AAC-%5BYTS.MX%5D.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://image.tmdb.org/t/p/w500/bArhvjRHl535XMaSh9VjInF2mSZ.jpg",Resident Evil Welcome To Raccoon City (2021)
-http://cinehub24.com/ftp/Movies/hollywood/2021/Resident%20Evil%20Welcome%20To%20Raccoon%20City%20%282021%29/Resident.Evil.Welcome.To.Raccoon.City.2021.1080p.WEBRip.x264.AAC5.1-%5BYTS.MX%5D.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://image.tmdb.org/t/p/w500/ohdUDWVlcbuWphaLu6wS91xdJ73.jpg",Resident Evil Retribution (2012)
-http://cinehub24.com/ftp/Movies/hollywood/2020/Resident%20Evil%20Retribution%20%282012%29/Resident.Evil.Retribution.2012.1080p.BluRay.x264.YIFY.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://image.tmdb.org/t/p/w500/6pQ44d0hoeuiD4wlCgXS0ZCuGq8.jpg",Resident Evil Afterlife (2010)
-http://cinehub24.com/ftp/Movies/hollywood/2020/Resident%20Evil%20Afterlife%20%282010%29/Resident%20Evil%20Afterlife%202010.720p.BrRip.x264.YIFY.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://image.tmdb.org/t/p/w500/6yaLr7Ymg5cvbtSVi5hHwBKx35I.jpg",Resident Evil Extinction (2007)
-http://cinehub24.com/ftp/Movies/hollywood/2020/Resident%20Evil%20Extinction%20%282007%29/Resident.Evil.Extinction.2007.1080p.BrRip.x264.YIFY.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://image.tmdb.org/t/p/w500/way9dOm4dM2sm9UMcu2PEXMTX0q.jpg",Resident Evil Apocalypse (2004)
-http://cinehub24.com/ftp/Movies/hollywood/2020/Resident%20Evil%20Apocalypse%20%282004%29/Resident.Evil.Apocalypse.2004.1080p.BrRip.x264.YIFY.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://image.tmdb.org/t/p/w500/1UKNef590A0ZaMnxsscIcWuK1Em.jpg",Resident Evil (2002)
-http://cinehub24.com/ftp/Movies/hollywood/2020/Resident%20Evil%20%282002%29/Resident%20Evil%202002.720p.BrRip.x264.YIFY.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://image.tmdb.org/t/p/w500/cdWfUYREo8RXkPxnZLvuG08QJrP.jpg",Governor (2026)
-http://ftp.ctgfun.com/Indian/Hindi%20Movies/Governor%20%282026%29%20Hindi%201080p%20HDTS%20x264%20ESub%20%5BDDN%5D/Governor%20%282026%29%20Hindi%201080p%20HDTS%20x264%20ESub%20%5BDDN%5D.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://image.tmdb.org/t/p/w500/jt8pfSIdi47YpFMMWVRr8w5u2S0.jpg",Jana Nayagan (2026)
-http://cinehub24.com/ftp/Movies/hindidub/Jana%20Nayagan%20%282026%29/Jana_Nayagan_2026_South_Hindi_HQ_Dubbed_Full_Movie_1080p_WEB-DL-%28Jalshamoviez.in%29.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://image.tmdb.org/t/p/w500/znOpOhDmKlspIoeR3MvFeuhG19q.jpg",Pallichattambi (2026)
-http://cinehub24.com/ftp/Movies/hindidub/Pallichattambi%202026/Pallichattambi%20%282026%29%201080p%20CAMRip.mp4
+#EXTINF:-1 group-title="Movies" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLOrrVnk_41l-x7vMswKXKH2YJYGL5TNx6MzOEbEvzUA&s",Manoranjan Grend
+http://103.175.73.12:8080/live/19/19_0.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG0022J67W.png?lock=720x540",&flix HD (1080p)
 http://103.72.101.252:8080/live/1322.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG002FYK4V.png?lock=720x540",&pictures (720p)
@@ -34475,6 +34453,8 @@ http://103.72.101.252:8080/live/417.m3u8
 https://cdn-3.pishow.tv/live/1530/master.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Maha_Movies.png",Maha Movie (576p)
 https://cdn-6.pishow.tv/live/10007/master.m3u8
+#EXTINF:-1 group-title="Movies" tvg-logo="https://dtil.tmsimg.com/assets/s143302_ld_h15_aa.png?lock=720x540",Manoranjan Grand (720p)
+https://cdn-1.pishow.tv/live/1011/master.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://dtil.tmsimg.com/assets/s143303_ld_h15_aa.png?lock=720x540",Manoranjan Movies (720p)
 http://103.213.31.109:90/ManoranjanMovies/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX_HD/images/LOGO_HD/image.png",MNX HD (1080p)
@@ -34531,10 +34511,6 @@ https://cdn-1.pishow.tv/live/276/master.m3u8
 https://stream.sscloud7.com/live/suriyantv/index.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/thalaa-tv.png",Thalaa TV (1080p)
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2069c593-3c07-4d62-9d44-746be5c3a5d6/manifest.m3u8
-#EXTINF:-1 group-title="Movies" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/IN38000072R_20260325T012318SQUARE.png",The Movie Club (1080p)
-https://sis-global.prod.samsungtv.plus/v1/tvpprd/sc-mp2ar4ca425xo.m3u8
-#EXTINF:-1 group-title="Movies" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/IN40000100Y_20260204T004058SQUARE.png",The Movie Club +2 (1080p)
-https://d3gnyty2vddhsg.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ytipwjqub3kf8/TMC2_IN.m3u8?ads.ads_cdn=cf&ads.cdn=cf
 #EXTINF:-1 group-title="Movies" tvg-logo="https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/aumnrs.png",Tolly TV (1080p)
 https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/13b5735d-52c3-4be0-853d-e0ec0127e708/manifest.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG0022K5ZV.png?lock=720x540",Zee Action (576p)
@@ -34551,8 +34527,6 @@ http://149.71.34.166:8000/play/a01q/index.m3u8
 https://trs1.aynaott.com/ZeeCinemaHD/index.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CINEMA/images/LOGO_HD/LOGO_HD_image.png",Zee Cinema HD (1080p)
 http://103.72.101.252:8080/live/165.m3u8
-#EXTINF:-1 group-title="Movies" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG0022ZNDZ.png?lock=720x540",Zee Cinemalu (576p)
-http://103.72.101.252:8080/live/413.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://d3bd0tgyk368z1.cloudfront.net/zeelg/LG%20logo%20artwork/400x200/zsouthflix.png",Zee South Flix (1080p)
 https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_TALKIES/images/LOGO_HD/LOGO_HD_image.png",Zee Talkies HD (1080p)
