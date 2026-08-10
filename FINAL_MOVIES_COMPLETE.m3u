@@ -43,14 +43,14 @@ http://103.175.73.12:8080/live/256/256_0.m3u8
 http://103.175.73.12:8080/live/270/270_0.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://bugsfreeweb.github.io/LiveTVCollector/BugsfreeLogo/default-logo.png",Goldmines Bollywood
 http://103.175.73.12:8080/live/52/52_0.m3u8
-#EXTINF:-1 group-title="Movies" tvg-logo="https://bugsfreeweb.github.io/LiveTVCollector/BugsfreeLogo/default-logo.png",Greenland 2: Migration (2026) (Hindi)
-http://premimum.online/movie/jen12345/jen54321/717746.mp4
+#EXTINF:-1 group-title="Movies" tvg-logo="https://bugsfreeweb.github.io/LiveTVCollector/BugsfreeLogo/default-logo.png",Goldmines Movies 2
+https://cdn-2.pishow.tv/live/1460/master.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://bugsfreeweb.github.io/LiveTVCollector/BugsfreeLogo/default-logo.png",Freelancer
 http://premimum.online/movie/jen12345/jen54321/353751.mp4
 #EXTINF:-1 group-title="Movies" tvg-logo="https://bugsfreeweb.github.io/LiveTVCollector/BugsfreeLogo/default-logo.png",Jana Nayagan (2026) (Hindi)
 http://premimum.online/movie/jen12345/jen54321/724489.mp4
-#EXTINF:-1 group-title="Movies" tvg-logo="https://bugsfreeweb.github.io/LiveTVCollector/BugsfreeLogo/default-logo.png",Goldmines Movies 2
-https://cdn-2.pishow.tv/live/1460/master.m3u8
+#EXTINF:-1 group-title="Movies" tvg-logo="https://bugsfreeweb.github.io/LiveTVCollector/BugsfreeLogo/default-logo.png",Greenland 2: Migration (2026) (Hindi)
+http://premimum.online/movie/jen12345/jen54321/717746.mp4
 #EXTINF:-1 group-title="Movies" tvg-logo="https://i.imgur.com/pIuJqYk.png",Movie Kingdom
 https://a.jsrdn.com/broadcast/e9b4093a41/+0000/high/c.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="http://10.16.100.244/files/the_girl_on_the_train.jpg",THE GIRL ON THE TRAIN
@@ -354,9 +354,9 @@ http://sochinskayatrk.ru/hdtv/hls/strc_hd/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="http://www.nettv.live/uploads/allimg/19/1-1Z5092006450-L.jpg",黑莓电影
 http://121.31.30.90:8085/ysten-business/live/jdianying/1.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1780310920616.png",Sony Max
-https://owrcovcrpy.gpcdn.net/bpk-tv/1730/output/index.mpd?_t=1786143641382
+https://owrcovcrpy.gpcdn.net/bpk-tv/1730/output/index.mpd?_t=1786402838779
 #EXTINF:-1 group-title="Movies" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1780311807965.png",Sony Pix
-https://owrcovcrpy.gpcdn.net/bpk-tv/1731/output/index.mpd?_t=1786143641795
+https://owrcovcrpy.gpcdn.net/bpk-tv/1731/output/index.mpd?_t=1786402838785
 #EXTINF:-1 group-title="Movies" tvg-logo="https://i.imgur.com/25eWjX2.png",Jalsha Movies HD (1080p)
 http://103.229.254.25:7001/play/a0dt/index.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://dtil.tmsimg.com/assets/GNLZZGG0022J67W.png?lock=720x540",&flix HD (1080p)
@@ -381,8 +381,8 @@ http://149.71.34.166:8000/play/a06e/index.m3u8
 https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://dtil.tmsimg.com/assets/s142695_ld_h15_aa.png?lock=720x540",B4U Kadak (1080p) [Not 24/7]
 https://cdnb4u.wiseplayout.com/B4U_Kadak/master.m3u8
-#EXTINF:-1 group-title="Movies" tvg-logo="https://i.imgur.com/M9kMFJl.png",B4U Movies (1080p) [Geo-blocked]
-https://amg00877-b4unew-amg00877c2-lg-in-5260.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Movies" tvg-logo="https://i.imgur.com/M9kMFJl.png",B4U Movies (576p)
+http://103.175.73.12:8080/live/43/43_0.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BHOJPURI_CINEMA/images/LOGO_HD/image.png",Bhojpuri Cinema (720p)
 http://103.213.31.109:90/BhojpuriCinema/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_BANGLA_CINEMA/images/LOGO_HD/image.png",Colors Bangla Cinema (576p)
@@ -451,8 +451,6 @@ https://d393sxaxig6bax.cloudfront.net/out/v1/589cf2cf44bf42bb941e817a2240d62e/in
 http://103.159.180.34:5001/live/3418.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://i.imgur.com/gqUYk6C.png",Sony Max 2 (576p)
 http://149.71.34.166:8000/play/a00z/index.m3u8
-#EXTINF:-1 group-title="Movies" tvg-logo="https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png",Sony Pix
-https://playyonogames.in/sliv/stream.m3u8?id=1000009258
 #EXTINF:-1 group-title="Movies" tvg-logo="https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png",Sony Pix HD (1080p) [Geo-blocked]
 https://sl.vodep39240327.workers.dev/channel/SONY+PIX+HD.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_WAH/images/LOGO_HD/image.png",Sony Wah (1080p) [Geo-blocked]
