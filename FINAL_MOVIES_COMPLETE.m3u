@@ -339,12 +339,12 @@ https://sc.id-tv.kz/RenTV.m3u8
 http://sochinskayatrk.ru/hdtv/hls/strc_hd/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="http://www.nettv.live/uploads/allimg/19/1-1Z5092006450-L.jpg",黑莓电影
 http://121.31.30.90:8085/ysten-business/live/jdianying/1.m3u8
+#EXTINF:-1 group-title="Movies" tvg-logo="https://img1.wsimg.com/isteam/ip/f5ca61b0-4924-46b3-93d1-5961808d44f6/Home%20no%20vignette%20low_Half2.jpg",EN | AMG TV (Classic)
+https://2-fss-2.streamhoster.com/pl_138/201660-1270634-1/chunklist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/f/f8/AHSlogo.png",American Horrors
 http://107.167.7.162:8081/playlist/amhor/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/3/36/AMC_2016.svg",EN | AMC Triller
 https://436f59579436473e8168284cac5d725f.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Plex_RushByAMC/playlist.m3u8
-#EXTINF:-1 group-title="Movies" tvg-logo="https://img1.wsimg.com/isteam/ip/f5ca61b0-4924-46b3-93d1-5961808d44f6/Home%20no%20vignette%20low_Half2.jpg",EN | AMG TV (Classic)
-https://2-fss-2.streamhoster.com/pl_138/201660-1270634-1/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://i.pinimg.com/736x/16/96/5a/16965ad632bc23692c8c1a946bd15f2a.jpg",EN | AVA FAMILY
 https://familyhls.avatv.live/hls/stream.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://yt3.googleusercontent.com/8htYIakRJnnyIymW9dKwuwZSYav5YND6wlQlQ-v6NelcyAmpNmOZDFAngGImtaa3O4pAVgMk6w=s72-c-k-c0x00ffffff-no-rj",EN | AVA SERIES
