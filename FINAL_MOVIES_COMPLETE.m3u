@@ -357,6 +357,8 @@ http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f
 https://gsn-cinevault-westerns-2-us.roku.wurl.tv/playlist.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://www.circlecountry.com/app/themes/circle-tailpress/images/circlecountry_logo.svg",EN | Circle
 https://circle-roku.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="Movies" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/8/83/TCM_logo.svg",EN | Classic Movies
+https://30a-tv.com/feeds/pzaz/30atvmovies.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/FX_Logo_2023.svg/1200px-FX_Logo_2023.svg.png",EN | FX 1 Movies
 https://fxtvhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 group-title="Movies" tvg-logo="https://images.crunchbase.com/image/upload/c_pad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/m9kufdwxrebnfsaade94",EN | FX2
