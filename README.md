@@ -42,15 +42,15 @@ https://raw.githubusercontent.com/Zaman-Topu/Ip-tv-Collection/main/FINAL_EPG_COM
 *This repository uses a custom GitHub Action bot to ping the Live TV channels and verify their uptime every single night! (Movies/VODs are excluded from the ping to ensure ultra-fast nightly checks).*
 
 <!-- STATS:START -->
-> **Last Checked:** 2026-11-16 04:38 AM (BST)
+> **Last Checked:** 2026-11-17 07:45 AM (BST)
 > *Next check scheduled for 12:00 AM tonight.*
 
 | Status | Count | Percentage | Description |
 | :--- | :---: | :---: | :--- |
-| 🟢 **Active** | **2848** | 40.1% | Online and streaming globally. |
+| 🟢 **Active** | **2836** | 39.9% | Online and streaming globally. |
 | 🔵 **Local ISP / BDIX** | **128** | 1.8% | Local Bangladeshi ISP servers. Working perfectly if you are on that ISP. |
-| 🟡 **Geo-Blocked** | **629** | 8.9% | Stream is online but restricted to specific countries. |
-| 🔴 **Down / Error** | **3494** | 49.2% | Server offline, timed out, or returning errors globally. |
+| 🟡 **Geo-Blocked** | **630** | 8.9% | Stream is online but restricted to specific countries. |
+| 🔴 **Down / Error** | **3505** | 49.4% | Server offline, timed out, or returning errors globally. |
 | 📺 **Total Tested** | **7099** | 100% | Total channels in the playlist. |
 
 <details>
@@ -58,10 +58,10 @@ https://raw.githubusercontent.com/Zaman-Topu/Ip-tv-Collection/main/FINAL_EPG_COM
 
 ```mermaid
 pie title IPTV Channel Status Breakdown
-    "Active (🟢)" : 2848
+    "Active (🟢)" : 2836
     "Local ISP/BDIX (🔵)" : 128
-    "Geo-Blocked (🟡)" : 629
-    "Down (🔴)" : 3494
+    "Geo-Blocked (🟡)" : 630
+    "Down (🔴)" : 3505
 ```
 </details>
 <!-- STATS:END -->
